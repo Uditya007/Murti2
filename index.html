@@ -12,11 +12,12 @@
       --maroon:#6B0000;--dark-maroon:#3D0000;--cream:#FFF8E7;
       --cream-dark:#F5E6C8;--purple:#4A148C;--purple-light:#7B1FA2;
       --white:#ffffff;--text-dark:#2C1810;--text-gray:#666;
-      --shadow:0 4px 20px rgba(0,0,0,.15);
-      --shadow-gold:0 4px 20px rgba(212,175,55,.35);
+      --luxury:#0f0917;--luxury-soft:#1f102d;
+      --shadow:0 6px 24px rgba(0,0,0,.2);
+      --shadow-gold:0 10px 35px rgba(212,175,55,.32);
     }
     *{margin:0;padding:0;box-sizing:border-box}
-    body{font-family:'Poppins',sans-serif;background:var(--cream);color:var(--text-dark);overflow-x:hidden}
+    body{font-family:'Poppins',sans-serif;background:linear-gradient(160deg,#fff8ea 0%,#fff2d7 45%,#f7e4bd 100%);color:var(--text-dark);overflow-x:hidden}
     ::-webkit-scrollbar{width:8px}
     ::-webkit-scrollbar-track{background:var(--cream-dark)}
     ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
@@ -27,8 +28,8 @@
 
     /* NAVBAR */
     .navbar{position:fixed;top:0;width:100%;z-index:1000;
-      background:linear-gradient(135deg,var(--dark-maroon) 0%,var(--maroon) 60%,#8B0000 100%);
-      box-shadow:0 2px 20px rgba(0,0,0,.35);padding:0 20px}
+      background:linear-gradient(120deg,#180010 0%,var(--dark-maroon) 45%,#5e041e 100%);
+      box-shadow:0 8px 28px rgba(0,0,0,.45);padding:0 20px;backdrop-filter:blur(6px)}
     .nav-container{max-width:1300px;margin:0 auto;display:flex;align-items:center;
       justify-content:space-between;height:70px}
     .nav-logo{display:flex;align-items:center;gap:10px;cursor:pointer;text-decoration:none}
@@ -46,13 +47,25 @@
     .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:5px}
     .hamburger span{width:25px;height:2px;background:var(--gold-light);border-radius:2px;transition:all .3s}
 
+    /* FRONT BANNER */
+    .front-banner{margin-top:70px;padding:36px 40px;background:
+      linear-gradient(120deg,rgba(15,9,23,.95) 0%,rgba(61,0,0,.95) 45%,rgba(116,67,12,.9) 100%);
+      border-bottom:1px solid rgba(212,175,55,.35);box-shadow:0 12px 30px rgba(0,0,0,.3)}
+    .front-banner-inner{max-width:1300px;margin:0 auto;display:flex;gap:24px;align-items:center;justify-content:space-between}
+    .front-banner h2{font-family:'Playfair Display',serif;font-size:2rem;color:var(--gold-light);line-height:1.2;margin-bottom:10px}
+    .front-banner p{color:var(--cream-dark);max-width:760px;line-height:1.8}
+    .front-banner p strong{color:#fff}
+    .front-banner-chips{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+    .banner-chip{border:1px solid rgba(255,215,0,.4);color:var(--gold-light);padding:6px 14px;border-radius:999px;font-size:.8rem;background:rgba(255,255,255,.06)}
+    .banner-cta{white-space:nowrap}
+
     /* HERO SLIDER */
-    .hero-slider{position:relative;height:calc(100vh - 70px);overflow:hidden;margin-top:70px}
+    .hero-slider{position:relative;height:calc(100vh - 70px);overflow:hidden;margin-top:0}
     .slide{position:absolute;inset:0;opacity:0;transition:opacity .9s ease;background-size:cover;
       background-position:center;display:flex;align-items:center}
     .slide.active{opacity:1}
     .slide-overlay{position:absolute;inset:0;
-      background:linear-gradient(135deg,rgba(61,0,0,.75) 0%,rgba(74,20,140,.45) 100%)}
+      background:linear-gradient(125deg,rgba(15,9,23,.88) 0%,rgba(61,0,0,.78) 46%,rgba(122,68,9,.52) 100%)}
     .slide-content{position:relative;z-index:2;padding:0 60px;max-width:650px}
     .slide-badge{display:inline-block;background:var(--gold);color:var(--dark-maroon);
       padding:5px 20px;border-radius:20px;font-size:.78rem;font-weight:700;
@@ -62,11 +75,11 @@
     .slide-content h1 span{color:var(--gold-light)}
     .slide-content p{font-size:1.1rem;color:var(--cream-dark);margin-bottom:32px;line-height:1.7}
     .slide-btns{display:flex;gap:15px;flex-wrap:wrap}
-    .btn-primary{background:linear-gradient(135deg,var(--saffron),#FF8C00);color:#fff;
+    .btn-primary{background:linear-gradient(135deg,#bd7d00,#f0b90b);color:#2f1300;
       padding:14px 32px;border:none;border-radius:30px;font-size:1rem;font-weight:600;
       cursor:pointer;transition:all .3s;text-decoration:none;display:inline-block;
-      box-shadow:0 4px 15px rgba(255,102,0,.4);font-family:'Poppins',sans-serif}
-    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 6px 22px rgba(255,102,0,.5)}
+      box-shadow:0 8px 20px rgba(212,175,55,.45);font-family:'Poppins',sans-serif}
+    .btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(212,175,55,.55)}
     .btn-secondary{background:transparent;color:var(--gold-light);padding:13px 32px;
       border:2px solid var(--gold-light);border-radius:30px;font-size:1rem;font-weight:600;
       cursor:pointer;transition:all .3s;font-family:'Poppins',sans-serif}
@@ -127,9 +140,9 @@
       transition:all .3s;font-family:'Poppins',sans-serif}
     .filter-btn:hover,.filter-btn.active{background:var(--gold);color:var(--dark-maroon)}
     .products-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:28px}
-    .product-card{background:var(--white);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
-      transition:all .3s;border:1px solid rgba(212,175,55,.2);position:relative}
-    .product-card:hover{transform:translateY(-8px);box-shadow:var(--shadow-gold)}
+    .product-card{background:linear-gradient(180deg,#fff 0%,#fff8e8 100%);border-radius:20px;overflow:hidden;box-shadow:var(--shadow);
+      transition:all .3s;border:1px solid rgba(212,175,55,.3);position:relative}
+    .product-card:hover{transform:translateY(-10px);box-shadow:var(--shadow-gold)}
     .product-badge{position:absolute;top:14px;left:14px;background:var(--saffron);color:#fff;
       padding:4px 12px;border-radius:20px;font-size:.73rem;font-weight:700;z-index:2}
     .product-badge.nb{background:var(--purple-light)}
@@ -374,6 +387,11 @@
         background:var(--dark-maroon);flex-direction:column;padding:18px;gap:4px;z-index:999}
       .nav-links.open{display:flex}
       .hamburger{display:flex}
+      .front-banner{padding:24px 20px}
+      .front-banner-inner{flex-direction:column;align-items:flex-start}
+      .front-banner h2{font-size:1.55rem}
+      .banner-cta{width:100%}
+      .banner-cta .btn-primary{width:100%;text-align:center}
       .slide-content{padding:0 24px}
       .slide-content h1{font-size:2.3rem}
       .slide-content p{font-size:.95rem}
@@ -426,6 +444,24 @@
 
 <!-- ========== HOME SECTION ========== -->
 <section id="home-section" class="page-section active">
+
+  <!-- Front Page Banner -->
+  <div class="front-banner">
+    <div class="front-banner-inner">
+      <div>
+        <h2>The Maharaja Signature Collection</h2>
+        <p>Discover <strong>museum-grade divine murtis</strong> handcrafted by master artisans with rare Makrana marble, heritage finishes, and bespoke temple detailing for premium homes and sanctums.</p>
+        <div class="front-banner-chips">
+          <span class="banner-chip">Limited Editions</span>
+          <span class="banner-chip">Temple-grade Finish</span>
+          <span class="banner-chip">Private Concierge Ordering</span>
+        </div>
+      </div>
+      <div class="banner-cta">
+        <button class="btn-primary" onclick="showPage('products')">Explore Signature Pieces</button>
+      </div>
+    </div>
+  </div>
 
   <!-- Hero Slider -->
   <div class="hero-slider">
@@ -482,7 +518,7 @@
   <!-- Marquee -->
   <div class="marquee-bar">
     <div class="marquee-content">
-      🙏 Free Shipping on orders above ₹2,999
+      🙏 Free Shipping on orders above ₹9,999
       <span>|</span> Use <strong>DIVINE10</strong> for 10% off
       <span>|</span> 🕉 Authentic handcrafted murtis from Jaipur & Mathura
       <span>|</span> Use <strong>GODDESS20</strong> for 20% off orders above ₹9,999
@@ -812,7 +848,7 @@
           <button class="news-btn" onclick="subscribe(this)"><i class="fas fa-paper-plane"></i></button>
         </div>
         <div class="footer-perks">
-          <p>📦 Free shipping above ₹2,999</p>
+          <p>📦 Free shipping above ₹9,999</p>
           <p>🔒 Secure Razorpay payments</p>
           <p>🙏 Consecrated before delivery</p>
         </div>
@@ -828,28 +864,28 @@
 <script>
 // ===== PRODUCT DATA =====
 const PRODUCTS = [
-  { id:1, name:"Maa Kali Pearl Murti", cat:"goddess", price:4999, old:6999,
+  { id:1, name:"Maa Kali Pearl Murti", cat:"goddess", price:14999, old:19999,
     img:"https://github.com/user-attachments/assets/e4baa537-0aae-41ae-a583-d7a90c89c434",
     desc:"Black marble Maa Kali adorned with real pearls and precious gems. Height: 18 inches.", rating:5, reviews:128, badge:"Bestseller" },
-  { id:2, name:"Shiva with Nandi Murti", cat:"shiva", price:8999, old:11999,
+  { id:2, name:"Shiva with Nandi Murti", cat:"shiva", price:23999, old:31999,
     img:"https://github.com/user-attachments/assets/56dcbc61-2ca9-45ec-97a4-67c9c45140ba",
     desc:"White marble Shiv-Nandi with intricate 24K gold detailing. Height: 14 inches.", rating:5, reviews:96, badge:"Premium" },
-  { id:3, name:"Vishnu Lakshmi Pair", cat:"vishnu", price:12999, old:16999,
+  { id:3, name:"Vishnu Lakshmi Pair", cat:"vishnu", price:34999, old:45999,
     img:"https://github.com/user-attachments/assets/c333116d-3b14-4db7-99b8-410eb49fb901",
     desc:"White marble Vishnu-Lakshmi pair with 24K gold work. Height: 20 inches each.", rating:5, reviews:74, badge:"Exclusive" },
-  { id:4, name:"Maa Durga Murti", cat:"goddess", price:6499, old:8999,
+  { id:4, name:"Maa Durga Murti", cat:"goddess", price:18999, old:25999,
     img:"https://github.com/user-attachments/assets/e4baa537-0aae-41ae-a583-d7a90c89c434",
     desc:"Hand-painted Durga Mata with 8 arms, seated on lion. Marble with natural colours.", rating:4, reviews:63, badge:"New" },
-  { id:5, name:"Ganesh Marble Murti", cat:"ganesh", price:3499, old:4999,
+  { id:5, name:"Ganesh Marble Murti", cat:"ganesh", price:12999, old:16999,
     img:"https://github.com/user-attachments/assets/56dcbc61-2ca9-45ec-97a4-67c9c45140ba",
     desc:"Auspicious Ganesh murti in white marble with golden crown. Height: 10 inches.", rating:5, reviews:211, badge:"Popular" },
-  { id:6, name:"Radha Krishna Pair", cat:"krishna", price:9499, old:13999,
+  { id:6, name:"Radha Krishna Pair", cat:"krishna", price:26999, old:34999,
     img:"https://github.com/user-attachments/assets/c333116d-3b14-4db7-99b8-410eb49fb901",
     desc:"Radha-Krishna playing flute in white marble with vibrant colour detailing.", rating:5, reviews:89, badge:"Bestseller" },
-  { id:7, name:"Maa Saraswati Murti", cat:"goddess", price:5999, old:7999,
+  { id:7, name:"Maa Saraswati Murti", cat:"goddess", price:17999, old:23999,
     img:"https://github.com/user-attachments/assets/e4baa537-0aae-41ae-a583-d7a90c89c434",
     desc:"Goddess of wisdom with veena in white marble and gold highlights. Height: 15 inches.", rating:4, reviews:42, badge:"" },
-  { id:8, name:"Nataraja Shiva Murti", cat:"shiva", price:7499, old:9999,
+  { id:8, name:"Nataraja Shiva Murti", cat:"shiva", price:21999, old:28999,
     img:"https://github.com/user-attachments/assets/56dcbc61-2ca9-45ec-97a4-67c9c45140ba",
     desc:"Dancing Shiva Nataraja in premium brass with antique finish. Height: 16 inches.", rating:4, reviews:55, badge:"New" }
 ];
@@ -1013,7 +1049,7 @@ function updateCartUI() {
 
   document.getElementById('cartSub').textContent   = '₹' + sub.toLocaleString('en-IN');
   document.getElementById('cartTotal').textContent = '₹' + final.toLocaleString('en-IN');
-  document.getElementById('shipCost').textContent  = sub >= 2999 ? 'FREE' : '₹199';
+  document.getElementById('shipCost').textContent  = sub >= 9999 ? 'FREE' : '₹199';
 
   const dr = document.getElementById('discRow');
   if (disc > 0) {
@@ -1110,7 +1146,7 @@ function selPayMethod(el) {
 }
 
 function processPayment() {
-  const amount = (getFinal() + (getSub() >= 2999 ? 0 : 199)) * 100; // paise
+  const amount = (getFinal() + (getSub() >= 9999 ? 0 : 199)) * 100; // paise
   const options = {
     key: 'rzp_test_YourKeyHere', // IMPORTANT: Replace with your Razorpay Key ID from dashboard.razorpay.com
     // Note: Only the public key_id belongs here. Never put your Razorpay secret key in client-side code.
