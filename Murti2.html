@@ -597,7 +597,7 @@
 <section id="about-section" class="page-section">
   <div class="about-hero">
     <h1>Our Divine Story</h1>
-    <p>Bringing sacred art and devotion together — crafting authentic murtis that carry the blessings of India's heritage artisans since 1987.</p>
+    <p>Bringing sacred art and devotion together — crafting authentic murtis that carry the blessings of India's heritage artisans since 1990.</p>
   </div>
   <div class="about-content">
     <div class="about-grid">
@@ -605,7 +605,7 @@
         <img src="https://github.com/user-attachments/assets/56dcbc61-2ca9-45ec-97a4-67c9c45140ba" alt="About Divya Murti Mandir">
       </div>
       <div class="about-text">
-        <h2>Crafting Divinity Since 1987</h2>
+        <h2>Crafting Divinity Since 1990</h2>
         <p>Divya Murti Mandir was founded with a sacred mission — to preserve and celebrate India's rich tradition of murti craftsmanship. Every statue we offer is handcrafted by skilled artisans in Jaipur, Mathura, and Varanasi.</p>
         <p>Our artisans have inherited their craft through generations, ensuring each murti carries not just artistic beauty, but spiritual energy and devotion. We source only the finest materials — Makrana marble, premium stone, and precious metals.</p>
         <p>From small home mandirs to large temple installations, we cater to every devotee's need with authenticity, reverence, and excellence.</p>
@@ -1112,7 +1112,8 @@ function selPayMethod(el) {
 function processPayment() {
   const amount = (getFinal() + (getSub() >= 2999 ? 0 : 199)) * 100; // paise
   const options = {
-    key: 'rzp_test_YourKeyHere', // Replace with your Razorpay Key ID
+    key: 'rzp_test_YourKeyHere', // IMPORTANT: Replace with your Razorpay Key ID from dashboard.razorpay.com
+    // Note: Only the public key_id belongs here. Never put your Razorpay secret key in client-side code.
     amount: amount,
     currency: 'INR',
     name: 'Divya Murti Mandir',
