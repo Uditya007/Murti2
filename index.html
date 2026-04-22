@@ -25,7 +25,6 @@
     ::-webkit-scrollbar-track{background:var(--cream-dark)}
     ::-webkit-scrollbar-thumb{background:var(--gold);border-radius:4px}
 
-```
 /* PAGE SECTIONS */
 .page-section{display:none;min-height:100vh}
 .page-section.active{display:block}
@@ -54,7 +53,7 @@
 .hamburger span{width:25px;height:2px;background:var(--gold-light);border-radius:2px;transition:all .3s}
 
 /* HERO SECTION */
-.hero-slider{position:relative;height:calc(100vh - 70px);overflow:hidden;margin-top:70px}
+.hero-slider{position:relative;height:calc(100vh - 70px);min-height:300px;overflow:hidden;margin-top:70px}
 .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.2s ease;background-size:cover;
   background-position:center top;display:flex;align-items:center}
 .slide.active{opacity:1}
@@ -180,9 +179,9 @@
   padding:4px 12px;border-radius:20px;font-size:.73rem;font-weight:700;z-index:2}
 .product-badge.nb{background:var(--purple-light)}
 .wishlist-btn{position:absolute;top:14px;right:14px;background:#fff;border:none;
-  width:36px;height:36px;border-radius:50%;display:flex;align-items:center;
+  width:44px;height:44px;border-radius:50%;display:flex;align-items:center;
   justify-content:center;cursor:pointer;box-shadow:var(--shadow);color:#ccc;
-  font-size:1rem;transition:all .3s;z-index:2}
+  font-size:1.1rem;transition:all .3s;z-index:2}
 .wishlist-btn:hover,.wishlist-btn.active{color:var(--saffron)}
 .prod-img-wrap{height:270px;overflow:hidden;background:linear-gradient(135deg,var(--cream),var(--cream-dark));
   display:flex;align-items:center;justify-content:center}
@@ -231,8 +230,8 @@
 .ci-name{font-weight:600;font-size:.88rem;color:var(--dark-maroon);margin-bottom:3px}
 .ci-price{color:var(--maroon);font-weight:700;font-size:.92rem}
 .ci-qty{display:flex;align-items:center;gap:8px;margin-top:7px}
-.qty-btn{width:26px;height:26px;border:1px solid var(--gold);background:transparent;
-  border-radius:50%;cursor:pointer;font-size:.85rem;display:flex;align-items:center;
+.qty-btn{width:36px;height:36px;border:1px solid var(--gold);background:transparent;
+  border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;
   justify-content:center;transition:all .2s;color:var(--maroon)}
 .qty-btn:hover{background:var(--gold);color:var(--dark-maroon)}
 .qty-num{font-weight:600;min-width:20px;text-align:center}
@@ -339,13 +338,13 @@
   display:grid;grid-template-columns:1fr 1.5fr;gap:60px}
 .contact-info h2{font-family:'Playfair Display',serif;font-size:1.75rem;color:var(--dark-maroon);margin-bottom:24px}
 .contact-item{display:flex;gap:14px;margin-bottom:24px;align-items:flex-start}
-.c-icon{width:44px;height:44px;background:linear-gradient(135deg,var(--maroon),var(--dark-maroon));
+.c-icon{width:48px;height:48px;background:linear-gradient(135deg,var(--maroon),var(--dark-maroon));
   border-radius:12px;display:flex;align-items:center;justify-content:center;
-  color:var(--gold-light);font-size:1.05rem;flex-shrink:0}
+  color:var(--gold-light);font-size:1.1rem;flex-shrink:0}
 .c-detail h4{font-weight:600;color:var(--dark-maroon);margin-bottom:3px}
 .c-detail p{color:var(--text-gray);font-size:.88rem;line-height:1.5}
 .social-links{display:flex;gap:12px;margin-top:28px}
-.soc-link{width:42px;height:42px;border-radius:50%;display:flex;align-items:center;
+.soc-link{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;
   justify-content:center;color:#fff;font-size:1rem;text-decoration:none;transition:transform .3s}
 .soc-link:hover{transform:translateY(-3px)}
 .soc-fb{background:#1877F2}
@@ -425,22 +424,44 @@ footer{background:linear-gradient(135deg,var(--dark-maroon) 0%,#1a0000 100%);
   .slide-content h1{font-size:2.3rem}
   .slide-content p{font-size:.95rem}
   .products-container{padding:20px}
-  .contact-section{grid-template-columns:1fr}
+  .contact-section{grid-template-columns:1fr;padding:40px 20px}
   .form-row{grid-template-columns:1fr}
   .footer-grid{grid-template-columns:1fr}
+  .footer-brand p{font-size:.82rem}
   .cart-sidebar{width:100%;right:-100%}
   .categories-grid{grid-template-columns:1fr 1fr}
+  .categories-section{padding:10px 16px 40px}
   .about-stats{flex-wrap:wrap;gap:18px}
   .values-grid{grid-template-columns:1fr}
+  .about-hero{padding:80px 20px 50px}
+  .about-content{padding:40px 20px}
+  .contact-hero{padding:80px 20px 50px}
+  footer{padding:40px 20px 24px}
+  .stats-section{padding:40px 20px}
+  .hero-stats{flex-wrap:wrap}
+  .hero-stat{padding:12px 24px;flex:1 1 50%}
+  .slider-dots{display:none}
+  .slider-arrow{width:44px;height:44px;font-size:.9rem}
+  .newsletter-form{flex-wrap:wrap}
+  .news-btn{width:100%;border-radius:25px}
+  .nav-links a{padding:12px 16px;font-size:.95rem;border-radius:8px;display:block}
+  .toast{white-space:normal;text-align:center;width:90%;font-size:.85rem}
+  .prod-img-wrap{height:220px}
 }
 @media(max-width:480px){
   .slide-content h1{font-size:1.8rem}
-  .section-title{font-size:2rem}
-  .about-hero h1,.contact-hero h1{font-size:2rem}
+  .section-title{font-size:1.8rem}
+  .about-hero h1,.contact-hero h1{font-size:1.8rem}
   .pay-methods{flex-wrap:wrap}
   .pay-method{min-width:calc(50% - 6px)}
+  .categories-grid{grid-template-columns:1fr}
+  .hero-stat{padding:10px 12px;flex:1 1 50%;min-width:120px}
+  .btn-primary,.btn-secondary{padding:12px 20px;font-size:.78rem}
+  .slide-btns{flex-direction:column;gap:10px}
+  .slide-btns .btn-primary,.slide-btns .btn-secondary{width:100%;text-align:center}
+  .logo-text{font-size:1rem}
+  .logo-sub{display:none}
 }
-```
 
   </style>
 </head>
@@ -495,7 +516,6 @@ footer{background:linear-gradient(135deg,var(--dark-maroon) 0%,#1a0000 100%);
       </div>
     </div>
 
-```
 <div class="slide" style="background-image:url('https://github.com/user-attachments/assets/56dcbc61-2ca9-45ec-97a4-67c9c45140ba')">
   <div class="slide-overlay"></div>
   <div class="slide-content">
@@ -549,7 +569,6 @@ footer{background:linear-gradient(135deg,var(--dark-maroon) 0%,#1a0000 100%);
   <button class="slider-dot" onclick="goToSlide(1)"></button>
   <button class="slider-dot" onclick="goToSlide(2)"></button>
 </div>
-```
 
   </div>
 
@@ -696,7 +715,6 @@ footer{background:linear-gradient(135deg,var(--dark-maroon) 0%,#1a0000 100%);
       </div>
     </div>
 
-```
 <div class="values-grid">
   <div class="value-card"><div class="val-icon">🕉</div><h3>Spiritual Authenticity</h3><p>Every murti is crafted following traditional Shilpa Shastra guidelines to ensure spiritual purity and divine energy.</p></div>
   <div class="value-card"><div class="val-icon">🔨</div><h3>Master Craftsmanship</h3><p>Our artisans are 3rd and 4th generation sculptors trained in the ancient art of murti making from Mathura and Jaipur.</p></div>
@@ -705,7 +723,6 @@ footer{background:linear-gradient(135deg,var(--dark-maroon) 0%,#1a0000 100%);
   <div class="value-card"><div class="val-icon">🙏</div><h3>Pooja Ready</h3><p>All our murtis are praan pratishthit (consecrated) by learned pujaris before dispatch.</p></div>
   <div class="value-card"><div class="val-icon">♻️</div><h3>Eco Conscious</h3><p>We use natural, eco-friendly materials and sustainable packaging as our commitment to Mother Earth.</p></div>
 </div>
-```
 
   </div>
 
@@ -755,7 +772,6 @@ footer{background:linear-gradient(135deg,var(--dark-maroon) 0%,#1a0000 100%);
       </div>
     </div>
 
-```
 <div class="contact-form-wrap">
   <h2>Send a Message</h2>
   <form onsubmit="submitContact(event)">
@@ -779,7 +795,6 @@ footer{background:linear-gradient(135deg,var(--dark-maroon) 0%,#1a0000 100%);
     <button type="submit" class="form-submit-btn"><i class="fas fa-paper-plane" style="margin-right:8px"></i>Send Message</button>
   </form>
 </div>
-```
 
   </div>
   <div id="contactFooter"></div>
